@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: palegreen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.menu img {
+  width: 50px;
+  height: 50px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+li label {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+li label:hover {
+  color: chocolate;
+  text-decoration: underline;
+}
+
+
+  .dp:hover {
+    color: chocolate;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .dp {
+    position: relative;
+  }
+  
+  .dp .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px 0;
+    z-index: 999;
+  }
+  
+  .dp:hover .dropdown {
+    display: block;
+  }
+  
+  .dropdown li {
+    color: white;
+    padding: 8px 20px;
+    white-space: nowrap;
+  }
+  
+  .dropdown li:hover {
+    background-color: #444;
+    cursor: pointer;
+  }
+  
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color:black;
+  border-radius: 8px;
+  top: 25px;
+  left: 0;
+  z-index: 1;
+}
+
+.dropdown li {
+  padding: 10px;
+  color: wheat;
+  white-space: nowrap;
+}
+
+.dp:hover .dropdown {
+  display: block;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.content {
+  flex: 1;
+  padding: 30px 20px;
+  text-align: center;
+  animation: fade 0.5s ease-in-out;
+}
+
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#tab-home:checked ~ .main .home,
+#tab-about:checked ~ .main .about,
+#tab-contact:checked ~ .main .contact {
+  display: block;
+  opacity: 1;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+marquee {
+  color: crimson;
+  padding: 10px;
+  display: block;
+}
+
+#pic {
+  width: 400px;
+  margin-top: 20px;
+  border: 2px solid #333;
+}
+
+footer {
+  background-color: rgb(68, 203, 68);
+  color: black;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
